@@ -5,6 +5,8 @@ all: build
 
 build:
 	@echo "  MKDIR build" && mkdir build
+	@echo "  COPY COPYING" && cp COPYING build
+	@echo "  COPY README.md" && cp README.md build
 	@echo "  COPY bgrt-progress.plymouth" && cp bgrt-progress.plymouth build
 	@for file in static/*; do \
 	echo "  COPY $$file"; \
